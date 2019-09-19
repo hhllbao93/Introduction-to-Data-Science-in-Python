@@ -1,15 +1,3 @@
-
-# coding: utf-8
-
-# ---
-# 
-# _You are currently looking at **version 1.5** of this notebook. To download notebooks and datafiles, as well as get help on Jupyter notebooks in the Coursera platform, visit the [Jupyter Notebook FAQ](https://www.coursera.org/learn/python-data-analysis/resources/0dhYG) course resource._
-# 
-# ---
-
-# # Assignment 3 - More Pandas
-# This assignment requires more individual learning then the last one did - you are encouraged to check out the [pandas documentation](http://pandas.pydata.org/pandas-docs/stable/) to find functions or methods you might not have used yet, or ask questions on [Stack Overflow](http://stackoverflow.com/) and tag them as pandas and python related. And of course, the discussion forums are open for interaction with your peers and the course staff.
-
 # ### Question 1 (20%)
 # Load the energy data from the file `Energy Indicators.xls`, which is a list of indicators of [energy supply and renewable electricity production](Energy%20Indicators.xls) from the [United Nations](http://unstats.un.org/unsd/environment/excel_file_tables/2013/Energy%20Indicators.xls) for the year 2013, and should be put into a DataFrame with the variable name of **energy**.
 # 
@@ -28,13 +16,11 @@
 # 
 # There are also several countries with numbers and/or parenthesis in their name. Be sure to remove these, 
 # 
-# e.g. 
 # 
 # `'Bolivia (Plurinational State of)'` should be `'Bolivia'`, 
 # 
 # `'Switzerland17'` should be `'Switzerland'`.
 # 
-# <br>
 # 
 # Next, load the GDP data from the file `world_bank.csv`, which is a csv containing countries' GDP from 1960 to 2015 from [World Bank](http://data.worldbank.org/indicator/NY.GDP.MKTP.CD). Call this DataFrame **GDP**. 
 # 
@@ -43,8 +29,6 @@
 # ```"Korea, Rep.": "South Korea", 
 # "Iran, Islamic Rep.": "Iran",
 # "Hong Kong SAR, China": "Hong Kong"```
-# 
-# <br>
 # 
 # Finally, load the [Sciamgo Journal and Country Rank data for Energy Engineering and Power Technology](http://www.scimagojr.com/countryrank.php?category=2102) from the file `scimagojr-3.xlsx`, which ranks countries based on their journal contributions in the aforementioned area. Call this DataFrame **ScimEn**.
 # 
@@ -56,14 +40,6 @@
 #        '2009', '2010', '2011', '2012', '2013', '2014', '2015'].
 # 
 # *This function should return a DataFrame with 20 columns and 15 entries.*
-
-# In[ ]:
-
-
-
-
-
-# In[100]:
 
 
 import pandas as pd
@@ -110,13 +86,10 @@ answer_one()
 # *This function should return a single number.*
 #    
 
-# In[101]:
 
 
 get_ipython().run_cell_magic('HTML', '', '<svg width="800" height="300">\n  <circle cx="150" cy="180" r="80" fill-opacity="0.2" stroke="black" stroke-width="2" fill="blue" />\n  <circle cx="200" cy="100" r="80" fill-opacity="0.2" stroke="black" stroke-width="2" fill="red" />\n  <circle cx="100" cy="100" r="80" fill-opacity="0.2" stroke="black" stroke-width="2" fill="green" />\n  <line x1="150" y1="125" x2="300" y2="150" stroke="black" stroke-width="2" fill="black" stroke-dasharray="5,3"/>\n  <text  x="300" y="165" font-family="Verdana" font-size="35">Everything but this!</text>\n</svg>')
 
-
-# In[120]:
 
 
 def answer_two():
@@ -143,7 +116,6 @@ answer_two()
 # 
 # *This function should return a Series named `avgGDP` with 15 countries and their average GDP sorted in descending order.*
 
-# In[103]:
 
 
 def answer_three():
@@ -160,7 +132,6 @@ answer_three()
 # 
 # *This function should return a single number.*
 
-# In[126]:
 
 
 def answer_four():
@@ -182,7 +153,6 @@ answer_four()
 # 
 # *This function should return a single number.*
 
-# In[105]:
 
 
 def answer_five():
@@ -195,8 +165,6 @@ answer_five()
 # What country has the maximum % Renewable and what is the percentage?
 # 
 # *This function should return a tuple with the name of the country and the percentage.*
-
-# In[106]:
 
 
 def answer_six():
@@ -212,7 +180,6 @@ answer_six()
 # 
 # *This function should return a tuple with the name of the country and the ratio.*
 
-# In[107]:
 
 
 def answer_seven():
@@ -248,7 +215,6 @@ answer_eight()
 # 
 # *(Optional: Use the built-in function `plot9()` to visualize the relationship between Energy Supply per Capita vs. Citable docs per Capita)*
 
-# In[109]:
 
 
 def answer_nine():
@@ -261,7 +227,6 @@ def answer_nine():
 answer_nine()
 
 
-# In[110]:
 
 
 def plot9():
@@ -274,7 +239,6 @@ def plot9():
     Top15.plot(x='Citable docs per Capita', y='Energy Supply per Capita', kind='scatter', xlim=[0, 0.0006])
 
 
-# In[63]:
 
 
 #plot9() # Be sure to comment out plot9() before submitting the assignment!
@@ -285,7 +249,6 @@ def plot9():
 # 
 # *This function should return a series named `HighRenew` whose index is the country name sorted in ascending order of rank.*
 
-# In[20]:
 
 
 def answer_ten():
@@ -321,7 +284,6 @@ answer_ten()
 # 
 # *This function should return a DataFrame with index named Continent `['Asia', 'Australia', 'Europe', 'North America', 'South America']` and columns `['size', 'sum', 'mean', 'std']`*
 
-# In[128]:
 
 
 def answer_eleven():
@@ -362,9 +324,6 @@ answer_eleven()
 # 
 # *This function should return a __Series__ with a MultiIndex of `Continent`, then the bins for `% Renewable`. Do not include groups with no countries.*
 
-# In[112]:
-
-
 def answer_twelve():
     Top15 = answer_one()
     ContinentDict  = {'China':'Asia', 
@@ -397,8 +356,6 @@ answer_twelve()
 # 
 # *This function should return a Series `PopEst` whose index is the country name and whose values are the population estimate string.*
 
-# In[113]:
-
 
 def answer_thirteen():
     Top15 = answer_one()
@@ -414,9 +371,6 @@ answer_thirteen()
 # 
 # Use the built in function `plot_optional()` to see an example visualization.
 
-# In[114]:
-
-
 def plot_optional():
     import matplotlib as plt
     get_ipython().magic('matplotlib inline')
@@ -431,14 +385,8 @@ def plot_optional():
 
     print("This is an example of a visualization that can be created to help understand the data. This is a bubble chart showing % Renewable vs. Rank. The size of the bubble corresponds to the countries' 2014 GDP, and the color corresponds to the continent.")
 
-
-# In[116]:
-
-
 #plot_optional() # Be sure to comment out plot_optional() before submitting the assignment!
 
-
-# In[ ]:
 
 
 
