@@ -1,20 +1,7 @@
-
-# coding: utf-8
-
-# ---
-# 
-# _You are currently looking at **version 1.2** of this notebook. To download notebooks and datafiles, as well as get help on Jupyter notebooks in the Coursera platform, visit the [Jupyter Notebook FAQ](https://www.coursera.org/learn/python-data-analysis/resources/0dhYG) course resource._
-# 
-# ---
-
-# # Assignment 2 - Pandas Introduction
-# All questions are weighted the same in this assignment.
-# ## Part 1
 # The following code loads the olympics dataset (olympics.csv), which was derrived from the Wikipedia entry on [All Time Olympic Games Medals](https://en.wikipedia.org/wiki/All-time_Olympic_Games_medal_table), and does some basic data cleaning. 
 # 
 # The columns are organized as # of Summer games, Summer medals, # of Winter games, Winter medals, total # number of games, total # of medals. Use this dataset to answer the questions below.
 
-# In[1]:
 
 
 import pandas as pd
@@ -48,7 +35,6 @@ df
 # 
 # *This function should return a Series.*
 
-# In[3]:
 
 
 # You should write your whole answer within the function provided. The autograder will call
@@ -68,7 +54,6 @@ answer_zero()
 # 
 # *This function should return a single string value.*
 
-# In[15]:
 
 
 def answer_one():
@@ -82,7 +67,6 @@ answer_one()
 # 
 # *This function should return a single string value.*
 
-# In[4]:
 
 
 def answer_two():
@@ -99,7 +83,6 @@ answer_two()
 # 
 # *This function should return a single string value.*
 
-# In[7]:
 
 
 def answer_three():
@@ -112,8 +95,6 @@ answer_three()
 # Write a function that creates a Series called "Points" which is a weighted value where each gold medal (`Gold.2`) counts for 3 points, silver medals (`Silver.2`) for 2 points, and bronze medals (`Bronze.2`) for 1 point. The function should return only the column (a Series object) which you created, with the country names as indices.
 # 
 # *This function should return a Series named `Points` of length 146*
-
-# In[39]:
 
 
 def answer_four():
@@ -132,14 +113,13 @@ len(Points)
 # 
 # *This function should return a single string value.*
 
-# In[55]:
+
 
 
 census_df = pd.read_csv('census.csv')
 census_df.head()
 
 
-# In[56]:
 
 
 def answer_five():
@@ -162,9 +142,6 @@ def answer_six():
 answer_six()
 
 
-# In[ ]:
-
-
 
 
 
@@ -174,8 +151,6 @@ answer_six()
 # e.g. If County Population in the 5 year period is 100, 120, 80, 105, 100, 130, then its largest change in the period would be |130-80| = 50.
 # 
 # *This function should return a single string value.*
-
-# In[187]:
 
 
 columns_to_keep = ['STNAME','CTYNAME',
@@ -199,8 +174,6 @@ answer_seven()
 # 
 # *This function should return a 5x2 DataFrame with the columns = ['STNAME', 'CTYNAME'] and the same index ID as the census_df (sorted ascending by index).*
 
-# In[186]:
-
 
 def answer_eight():
     tmp1=census_df[census_df['SUMLEV'] == 50]
@@ -211,8 +184,6 @@ def answer_eight():
     return tmp3[['STNAME','CTYNAME']]
 answer_eight()
 
-
-# In[ ]:
 
 
 
